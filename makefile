@@ -8,6 +8,7 @@ init:
 	touch README.md
 	touch docs/charter.md docs/ethics.md docs/cost_control.md
 	touch docs/architecture.md docs/working_agreement.md docs/changelog.md
+	touch tests/__init__.py
 	echo "✅ Initialized project structure."
 
 # 📓 Create today's log file
