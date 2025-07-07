@@ -1,4 +1,4 @@
-# Project Tem## 
+# Project Template
 
 ## 🎉 If you already forked the repo ... Welcome to Project Template Repository!
 
