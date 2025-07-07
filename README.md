@@ -1,12 +1,13 @@
 # Project Tem## 
 
-## 🎉 Welcome to Your Forked Repository!
+## 🎉 If you already forked the repo ... Welcome to Project Template Repository!
 
-You've successfully forked this project template! This repository is now ready to be transformed into your own custom project.
+This repository is now ready to be transformed into your own custom project.
 
 **If you already cloned this repository locally:** Switch to the detailed [Bootstrap Guide](PROJECT_BOOTSTRAP_GUIDE.md) for comprehensive setup instructions.te
-
 A modern Python project template for rapid development setup.
+
+**If you haven't cloned it yet, [see section 1. Clone your forked repository](#1-clone-your-forked-repository) to get started.** 
 
 ## � If You Haven't Forked Yet
 
