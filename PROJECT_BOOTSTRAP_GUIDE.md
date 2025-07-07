@@ -12,6 +12,11 @@ This guide is for users who have already forked the template repository. If you'
 ✅ You're now in your project directory  
 
 ### **Step 2: Bootstrap Your Project**
+
+**💡 Tech Tips:**
+- Make sure you're in the cloned directory: `cd your-forked-repo`
+- Run these commands in Terminal/Command Prompt
+
 ```bash
 # Make scripts executable (if needed)
 chmod +x validate_bootstrap.sh project_bootstrap.sh
@@ -20,7 +25,7 @@ chmod +x validate_bootstrap.sh project_bootstrap.sh
 ./validate_bootstrap.sh
 
 # Bootstrap your project with your chosen name
-./project_bootstrap.sh my-awesome-project
+./project_bootstrap.sh 
 ```
 
 ### **Step 3: What the Bootstrap Does**
