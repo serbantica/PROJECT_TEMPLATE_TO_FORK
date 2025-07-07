@@ -31,16 +31,15 @@ clean:
 # 🐍 Setup Python environment using uv (https://github.com/astral-sh/uv)
 setup:
 	@echo "🔧 Installing uv and setting up Python environment..."
-	@python3 -m pip install --upgrade pip
-	@python3 -m pip install uv
+	@python3 -m pip install --upgrade pip uv
 	@uv venv .venv
-	@uv init || echo "pyproject.toml already exists"
-	@uv sync
+	@if [ ! -f "pyproject.toml" ]; then uv init; fi
 	@echo "✅ Python virtual environment set up at .venv/"
 
 # 🧪 Install dev dependencies
 devtools:
 	@echo "🛠️  Installing development tools..."
+	@. .venv/bin/activate && uv sync
 	@. .venv/bin/activate && uv add --dev ruff pytest black
 	@echo "✅ Development tools installed"
 
