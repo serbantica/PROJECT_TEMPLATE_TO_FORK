@@ -4,7 +4,7 @@
 
 You've successfully forked this project template! This repository is now ready to be transformed into your own custom project.
 
-**If you already cloned this repository locally:** Switch to the detailed [Bootstrap Guide](docs/PROJECT_BOOTSTRAP_GUIDE.md) for comprehensive setup instructions.te
+**If you already cloned this repository locally:** Switch to the detailed [Bootstrap Guide](PROJECT_BOOTSTRAP_GUIDE.md) for comprehensive setup instructions.te
 
 A modern Python project template for rapid development setup.
 
