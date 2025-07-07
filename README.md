@@ -2,7 +2,16 @@
 
 A modern Python project template for rapid development setup.
 
-## 🎉 Welcome to Your Forked Repository!
+## � If You Haven't Forked Yet
+
+If you're viewing this on the original repository and haven't forked yet:
+
+1. **Fork this repository** with your desired name:
+   - Click the "Fork" button on GitHub
+   - Rename it to something like `Project_Template` or anything that suits you
+   - This will create your own copy of the template
+
+## �🎉 Welcome to Your Forked Repository!
 
 You've successfully forked this project template! This repository is now ready to be transformed into your own custom project.
 
