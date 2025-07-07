@@ -20,10 +20,12 @@ This guide is for users who have already forked the template repository. If you'
 ```bash
 # Make scripts executable (if needed)
 chmod +x validate_bootstrap.sh project_bootstrap.sh
-
+```
+```bash
 # Validate your environment
 ./validate_bootstrap.sh
-
+```
+```bash
 # Bootstrap your project with your chosen name
 ./project_bootstrap.sh 
 ```
