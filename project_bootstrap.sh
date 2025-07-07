@@ -27,9 +27,14 @@ echo "📝 Updating project files with name: $PROJECT_NAME"
 
 # Update pyproject.toml if it exists
 if [ -f "pyproject.toml" ]; then
-    sed -i.bak "s/name = \".*\"/name = \"$PROJECT_NAME\"/" pyproject.toml
+    # Convert project name to lowercase with hyphens (standard Python package naming)
+    PROJECT_SLUG=$(echo "$PROJECT_NAME" | tr '[:upper:]' '[:lower:]' | sed 's/[^a-z0-9]/-/g')
+    PROJECT_PACKAGE=$(echo "$PROJECT_NAME" | tr '[:upper:]' '[:lower:]' | sed 's/[^a-z0-9]/_/g')
+    
+    sed -i.bak "s/PROJECT_NAME_PLACEHOLDER/$PROJECT_SLUG/g" pyproject.toml
+    sed -i.bak "s/PROJECT_PACKAGE_PLACEHOLDER/$PROJECT_PACKAGE/g" pyproject.toml
     rm -f pyproject.toml.bak
-    echo "✅ Updated pyproject.toml with project name"
+    echo "✅ Updated pyproject.toml with project name: $PROJECT_SLUG"
 fi
 
 # Update main.py if it exists
@@ -67,6 +72,24 @@ fi
 echo ""
 echo "🔧 Setting up Python environment..."
 if command -v python3 &> /dev/null; then
+    # First initialize the project structure
+    echo "🏗️  Initializing project structure..."
+    make init
+    
+    # Create the src package directory structure
+    PROJECT_SLUG=$(echo "$PROJECT_NAME" | tr '[:upper:]' '[:lower:]' | sed 's/[^a-z0-9]/_/g')
+    mkdir -p "src/$PROJECT_SLUG"
+    
+    # Create __init__.py for the package
+    cat > "src/$PROJECT_SLUG/__init__.py" << EOF
+"""$PROJECT_NAME - A modern Python project template."""
+
+__version__ = "0.1.0"
+__author__ = "Your Name"
+__email__ = "your.email@example.com"
+EOF
+    
+    # Now setup the environment
     make setup
     echo "✅ Python environment setup completed"
 else
@@ -75,10 +98,9 @@ else
 fi
 
 # ===============================================
-# 3. Initialize project structure (if needed)
+# 3. Create main.py if needed
 # ===============================================
-echo "🏗️  Ensuring project structure is complete..."
-make init
+echo "📝 Creating main application file..."
 
 # Create main.py if it doesn't exist
 if [ ! -f "main.py" ]; then
