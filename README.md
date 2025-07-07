@@ -1,4 +1,10 @@
-# Project Template
+# Project Tem## 
+
+## 🎉 Welcome to Your Forked Repository!
+
+You've successfully forked this project template! This repository is now ready to be transformed into your own custom project.
+
+**If you already cloned this repository locally:** Switch to the detailed [Bootstrap Guide](docs/PROJECT_BOOTSTRAP_GUIDE.md) for comprehensive setup instructions.te
 
 A modern Python project template for rapid development setup.
 
@@ -11,9 +17,6 @@ If you're viewing this on the original repository and haven't forked yet:
    - Rename it to something like `Project_Template` or anything that suits you
    - This will create your own copy of the template
 
-## �🎉 Welcome to Your Forked Repository!
-
-You've successfully forked this project template! This repository is now ready to be transformed into your own custom project.
 
 ## 🚀 Quick Start (You're Here!)
 
@@ -31,8 +34,8 @@ chmod +x validate_bootstrap.sh project_bootstrap.sh
 # Validate your environment
 ./validate_bootstrap.sh
 
-# Bootstrap your project (replace with your project name)
-./project_bootstrap.sh my-awesome-project
+# Bootstrap your project
+./project_bootstrap.sh
 ```
 
 ### 3. Start developing
