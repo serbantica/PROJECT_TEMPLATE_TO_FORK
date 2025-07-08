@@ -34,6 +34,7 @@ chmod +x validate_bootstrap.sh project_bootstrap.sh
 The bootstrap script will:
 - ✅ Update all files with your project name
 - ✅ Set up Python environment with uv
+- ✅ Create the AI Project Charter Tool (`charter_tool/`)
 - ✅ Install development tools (ruff, pytest, black)
 - ✅ Run tests to validate setup
 - ✅ Clean up template files (including this guide!)
@@ -53,7 +54,7 @@ make test
 
 Your forked repository contains:
 - **validate_bootstrap.sh** - Environment validation
-- **project_bootstrap.sh** - Complete setup automation
+- **project_bootstrap.sh** - Complete setup automation, including charter tool creation
 - **makefile** - Development commands
 - **.gitignore** - Git ignore patterns
 - **README.md** - Project documentation template

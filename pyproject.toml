@@ -3,12 +3,15 @@ requires = ["hatchling"]
 build-backend = "hatchling.build"
 
 [project]
-name = "PROJECT_NAME_PLACEHOLDER"
+name = "ai-new-project"
 version = "0.1.0"
 description = "A modern Python project template"
 readme = "README.md"
 requires-python = ">=3.11"
-dependencies = []
+dependencies = [
+    "streamlit>=1.33.0",
+    "pyyaml>=6.0.1",
+]
 
 [project.optional-dependencies]
 dev = [
@@ -70,7 +73,7 @@ ignore = [
 "tests/*" = ["F401", "F811"]
 
 [tool.hatch.build.targets.wheel]
-packages = ["src/PROJECT_PACKAGE_PLACEHOLDER"]
+packages = ["src/ai_new_project"]
 
 [dependency-groups]
 dev = [
