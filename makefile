@@ -63,6 +63,12 @@ streamlit:
 	@echo "🚀 Launching AI Project Charter Tool..."
 	@bash charter_tool/run_streamlit.sh
 
+# 👤 Set git user for this repository
+set-user:
+	@git config user.name "$(USER_NAME)"
+	@git config user.email "$(USER_EMAIL)"
+	@echo "✅ Git user set to: $$(git config user.name) <$$(git config user.email)>"
+
 
 # 📋 Show available commands
 help:
@@ -76,6 +82,7 @@ help:
 	@echo "  make run       - Run the main application"
 	@echo "  make test      - Run tests"
 	@echo "  make streamlit - Run Streamlit Project Charter Tool"
+	@echo "  make set-user USER_NAME=\"John Doe\" USER_EMAIL=\"john.doe@example.com\" - Set local git user"
 	@echo "  make clean     - Clean temporary files"
 	@echo "  make help      - Show this help message"
 	@echo ""
